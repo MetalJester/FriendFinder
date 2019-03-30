@@ -5,18 +5,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome Glyphicons -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> -->
+
+    <!-- Chosen -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     <title>Survey</title>
 </head>
 
 <body>
 
-    <div>
+    <div class="container">
+        <h1 class="text-info">Survey Questions</h1>
+        <hr>
+        <h3 class="text-info">About You</h3>
+        <h5>Name (required)</h5>
+        <input type="text" id="name" class="form-control" required>
+        <h5>Link to photo image (required)</h5>
+        <input type="text" id="photo" class="form-control" required>
+        <hr>
+        <h3 class="text-info">Question 1</h3>
+        <h5>Your mind is always buzzing with questions.</h5>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Select an Option</label>
+            </div>
+            <select class="custom-select" id="q01">
+                <option selected>Choose...</option>
+                <option value="1">1 Strongly Agree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Disagree</option>
+            </select>
+        </div>
+        <hr>
+        <h3 class="text-info">Question 2</h3>
+        <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Select an Option</label>
+            </div>
+            <select class="custom-select" id="02">
+                <option selected>Choose...</option>
+                <option value="1">1 Strongly Agree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Disagree</option>
+            </select>
+        </div>
+        <hr>
+        <h3 class="text-info">Question 3</h3>
+        <h5>You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Select an Option</label>
+            </div>
+            <select class="custom-select" id="q03">
+                <option selected>Choose...</option>
+                <option value="1">1 Strongly Agree</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 Strongly Disagree</option>
+            </select>
+        </div>
 
-        <h1>Hello World - This is a survey</h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info" data-toggle="modal" id="submit" data-target="#myModal">
+            Submit Answers
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
 
     </div>
 
-    <div id="append-here"></div>
+    <script>
+
+        
+        
+
+        // $("#submit").on("click", function (event) {
+        //     event.preventDefault();
+
+        //     var userData = {
+        //         name: $("#name").val(),
+        //         photo: $("#photo").val(),
+        //         scores: [
+        //             $("#q01").val(),
+        //             $("#q02").val(),
+        //             $("#q03").val(),
+                    
+        //         ]
+        //     };
+
+        //     $.post("/api/friends", userData, function (data) {
+                
+
+        //     });
+
+        // });
+
+    </script>
+
+
 
 
 </body>
